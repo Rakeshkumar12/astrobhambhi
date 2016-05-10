@@ -11,6 +11,8 @@ Rails.application.config.assets.precompile += %w( 640.css )
 Rails.application.config.assets.precompile += %w( 768.css )
 Rails.application.config.assets.precompile += %w( 992.css )
 Rails.application.config.assets.precompile += %w( 1200.css )
+Rails.application.config.assets.precompile += %w( slick.css )
+Rails.application.config.assets.precompile += %w( slick-theme.css )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
