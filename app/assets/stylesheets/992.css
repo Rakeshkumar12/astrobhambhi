@@ -1,3 +1,4 @@
+@import url("fonts.css");
 /*-----| Wrapper, Container |----*/
 body{font-size: 14px;}
 
@@ -39,4 +40,4 @@ h2.astro{ background: url(../images/arrows.png) no-repeat left 38px; padding: 0 
 .footer-column.last{width:20%; float: right;}
 
 /*------|Social Share |------*/
-.social-share a{opacity: 1.0;}
+.social-share a{opacity: 1.0;}it
