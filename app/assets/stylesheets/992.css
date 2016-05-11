@@ -1,0 +1,42 @@
+/*-----| Wrapper, Container |----*/
+body{font-size: 14px;}
+
+/*----| Headings |-----*/
+h1{font-size:32px}
+h2{font-size: 32px;}
+h2.astro{ background: url(../images/arrows.png) no-repeat left 38px; padding: 0 0 30px;}
+
+/*-----| Slider |-----*/
+.carousel-control{top:43%;}
+.carousel-control img{width: auto;}
+.carousel-control img{width: 15px;}
+.carousel-caption{ bottom: 23px; }
+.carousel-caption .title{ font-size:70px;}
+.carousel-caption p{font-size: 20px; margin-bottom: 10px; }
+.carousel-caption p.big{font-size: 26px;}
+.bottomline{position: absolute;}
+.carousel-indicators {bottom: -10px; padding: 9px 25px 5px 5px;  width: 40%;}
+.carousel-indicators li{ width: 14px; height: 14px; margin: 0 4px;}
+.carousel-indicators .active{ width: 14px; height: 14px;}
+.banner-tagline{font-size: 18px; width: 60%; padding: 3px 0 6px 23px;}
+
+.slider-bg{bottom: -25px;}
+
+/*------| Responsive Tabs |------*/
+
+
+/*-----| Welcome Article |------*/
+.welcome-img img{width: 230px;}
+.welcome-txt{width: calc(100% - 231px);}
+
+/*------| Video Section |-------*/
+.video-section .video-bg{bottom: -35px;}
+
+/*-----| Footer |-----*/
+.footer-column.first{width: 20%;}
+.footer-column.second{width:30%;}
+.footer-column.third{width:30%;}
+.footer-column.last{width:20%; float: right;}
+
+/*------|Social Share |------*/
+.social-share a{opacity: 1.0;}

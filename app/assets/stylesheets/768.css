@@ -1,0 +1,26 @@
+/*-----| Wrapper, Container |----*/
+.container{width: 100%;}
+
+/*------| Courtsy |------*/
+.courtsy ul{float: left}
+.courtsy ul li{display: inline-block;}
+.courtsy ul li.welcome{color:#f2fb0a; margin-right: 12px;}
+.courtsy ul li img{display: inline;}
+.courtsy ul li span{display:inline-block;}
+.courtsy ul li span.first{border-right: 1px solid rgba(255,255,255,0.5); padding: 4px 10px 6px; margin-right: 10px;}
+.courtsy .courtsy-right{float: right; border-top: none;}
+
+/*-----| Header |------*/
+.header .header-right{width:60%;}
+
+/*-----|  Navigation |-------*/
+.navbar-nav > li{background: transparent; border-bottom: 0:}
+
+
+/*-----| Slider |-----*/
+.carousel-indicators {bottom: 0; padding: 8px 6px 5px 5px;}
+
+/*------| Video Section |-------*/
+.video-section .video-left{width: 38%; margin-right: 10px; float: left;}
+.video-section .video-right{width: calc(62% - 10px);  float: left;}
+.video-section .video-bg{bottom: -25px;}
