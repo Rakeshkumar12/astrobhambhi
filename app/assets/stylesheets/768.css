@@ -14,6 +14,10 @@
 /*-----| Header |------*/
 .header .header-right{width:60%;}
 
+/*-----|  Navigation |-------*/
+.navbar-nav > li{background: transparent; border-bottom: 0:}
+
+
 /*-----| Slider |-----*/
 .carousel-indicators {bottom: 0; padding: 8px 6px 5px 5px;}
 
