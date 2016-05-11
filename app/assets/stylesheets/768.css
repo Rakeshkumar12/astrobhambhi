@@ -1,9 +1,8 @@
-@import url("fonts.css");
 /*-----| Wrapper, Container |----*/
 .container{width: 100%;}
 
 /*------| Courtsy |------*/
-.courtsy ul{float: left}
+.courtsy ul{float: left;}
 .courtsy ul li{display: inline-block;}
 .courtsy ul li.welcome{color:#f2fb0a; margin-right: 12px;}
 .courtsy ul li img{display: inline;}
@@ -15,7 +14,7 @@
 .header .header-right{width:60%;}
 
 /*-----|  Navigation |-------*/
-.navbar-nav li{background: transparent; border-bottom: 0;}
+.navbar-nav > li{background: transparent; border-bottom: 0;}
 
 
 /*-----| Slider |-----*/

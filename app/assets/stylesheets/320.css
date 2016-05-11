@@ -1,4 +1,3 @@
-@import url("fonts.css");
 /*-----| Wrapper, Container |----*/
 body{background: #FFF; color:#120101; font-family: "Calibri",​Arial,​Tahoma; font-size: 12px;}
 .container{max-width: 1190px;}
@@ -83,7 +82,6 @@ input.form-control{border:1px solid #cbcbcb; border-radius: 0; box-shadow: none;
 .slider-bg{position: absolute; bottom: -10px; left: 0;}
 
 /*-----| Welcome Article |------*/
-.welcome-article{}
 .welcome-img{ text-align: center;}
 .welcome-img img{width: 50px;}
 .welcome-txt{color:#777676; font-size:14px; font-weight:700; width: calc(100% - 51px);}
@@ -156,7 +154,7 @@ input.form-control{border:1px solid #cbcbcb; border-radius: 0; box-shadow: none;
 .slick-slide img{display: inline-block;}
 
 /*------| Responsive Tabs |------*/
-.tab-wrapper{margin-bottom: 20px;}
+.tab-wrapper{margin-bottom: 20px; background: #f7f6f6;}
 .nav-tabs{background: #424242; border-top:3px solid #fb5124; border-bottom: 0; padding: 0 30px;}
 .nav-tabs > li:first-child{font-size:20px; color: #fff; float: left; padding-top: 5px;}
 .nav-tabs > li{float: right;}
@@ -164,6 +162,15 @@ input.form-control{border:1px solid #cbcbcb; border-radius: 0; box-shadow: none;
 .nav-tabs > li > a:hover{border-color:transparent; background: #fff; color: #fb5124;}
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover{color: #fb5124; border-color:transparent;}
+.tab-wrapper .tab-pane{padding: 20px 30px 10px;}
+.astro-products-row{float: right; margin:0 -8px;}
+.astro-products{width: 179px; float: left; margin:0 8px 25px;}
+.astro-products .img-wrapper{background: url("../images/item-bg.png") no-repeat center top; height: 168px;
+text-align: center; }
+.astro-products .img-wrapper img{max-width: 80%;}
+.astro-products .astro-name{font-size: 21px; line-height: 21px;}
+.astro-products .astro-price{color: #ee522a;font-size: 27px;font-weight: 700; line-height: 27px;}
+.astro-products .astro-price span{font-size: 18px;  font-weight: 400; vertical-align: top;}
 
 
 /*-----| Footer |-----*/

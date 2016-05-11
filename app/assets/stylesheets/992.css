@@ -9,7 +9,6 @@ h2.astro{ background: url(../images/arrows.png) no-repeat left 38px; padding: 0 
 /*-----| Slider |-----*/
 .carousel-control{top:43%;}
 .carousel-control img{width: auto;}
-.carousel-control img{width: 15px;}
 .carousel-caption{ bottom: 23px; }
 .carousel-caption .title{ font-size:70px;}
 .carousel-caption p{font-size: 20px; margin-bottom: 10px; }
@@ -30,7 +29,7 @@ h2.astro{ background: url(../images/arrows.png) no-repeat left 38px; padding: 0 
 .welcome-txt{width: calc(100% - 231px);}
 
 /*------| Video Section |-------*/
-.video-section .video-bg{bottom: -35px;}
+.video-section .video-bg{bottom: -32px;}
 
 /*-----| Footer |-----*/
 .footer-column.first{width: 20%;}
