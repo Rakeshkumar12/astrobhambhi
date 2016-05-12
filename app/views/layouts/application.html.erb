@@ -12,7 +12,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="courtsy clearfix">
+	<div class="col-sm-12">
+		<ul class="list-unstyled pull-left m-b-0">
+			<li class="welcome">Welcome Visitors ! </li>
+			<li>
+				<img src="/assets/phone.png" alt=""/>
+				<span class="first">+91-11-26175070, 91-11-26160803</span>
+				<span> HotLine: +91 98 103 03357 </span>
+			</li>
+		</ul>
+		<div class="courtsy-right">
+		  <% if user_signed_in? %>
+        <p>Welcome <%= current_user.email %></p>
+        <%= link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete %>
+      <%else%>
+		    <%= link_to 'Log in', new_user_session_path,class: "fa fa-user"%>
+		    <%= link_to 'Sign Up', new_user_registration_path%>|
+			  <a href="javascript:void(0)">Wishlist(0)</a>
+			<%end%>
+		</div>
+	</div>
+</div>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <%= yield %>
 
 </body>
