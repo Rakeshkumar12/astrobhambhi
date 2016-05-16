@@ -1,2 +1,8 @@
 /*-----| Slider |-----*/
-.carousel-indicators {bottom: -8px; padding: 7px 25px 5px 5px;}
+.banner-tagline{bottom: 9px}
+.carousel-indicators {bottom: 4px}
+
+/*-----| Products |-------*/
+.product-box .pad .left, .product-box .pad .right{width: 50%}
+.product-box .pad .left{border-right: 1px solid #c4c4c4; padding-right: 9px}
+.product-box .pad .right{padding-left:9px; padding-top:0}

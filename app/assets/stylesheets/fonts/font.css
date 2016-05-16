@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'NewsGothicStd-Bold';
+  src: url('NewsGothicStd-Bold.eot');
+  src: url('NewsGothicStd-Bold.woff2') format('woff2'),
+       url('NewsGothicStd-Bold.woff') format('woff'),
+       url('NewsGothicStd-Bold.ttf') format('truetype'),
+       url('NewsGothicStd-Bold.svg#NewsGothicStd-Bold') format('svg'),
+       url('NewsGothicStd-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NewsGothicStd';
+  src: url('NewsGothicStd.eot');
+  src: url('NewsGothicStd.woff2') format('woff2'),
+       url('NewsGothicStd.woff') format('woff'),
+       url('NewsGothicStd.ttf') format('truetype'),
+       url('NewsGothicStd.svg#NewsGothicStd') format('svg'),
+       url('NewsGothicStd.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('Calibri.eot');
+  src: url('Calibri.woff2') format('woff2'),
+       url('Calibri.woff') format('woff'),
+       url('Calibri.ttf') format('truetype'),
+       url('Calibri.svg#Calibri') format('svg'),
+       url('Calibri.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

@@ -1,41 +1,60 @@
 /*-----| Wrapper, Container |----*/
-body{font-size: 14px;}
+body{font-size: 14px}
 
 /*----| Headings |-----*/
 h1{font-size:32px}
-h2{font-size: 32px;}
-h2.astro{ background: url(../images/arrows.png) no-repeat left 38px; padding: 0 0 30px;}
+h2{font-size: 32px}
+h3.carousel-heading{font-size: 24px; }
+.right-form h3{font-size: 32px}
+
+/*----| Courtsy |------*/
+.courtsy ul li span{padding:4px 8px 6px;}
+.courtsy select{margin-right: 10px;}
+
+/*------| Navigation |------*/
+.navbar-default .navbar-nav > li > a{padding:15px 10px;}
+.navbar-right > li > a{height: 50px;}
 
 /*-----| Slider |-----*/
-.carousel-control{top:43%;}
-.carousel-control img{width: auto;}
+.carousel-control{top:39%}
+.carousel-control img{width: auto}
 .carousel-caption{ bottom: 23px; }
-.carousel-caption .title{ font-size:70px;}
+.carousel-caption .title{ font-size:70px}
 .carousel-caption p{font-size: 20px; margin-bottom: 10px; }
-.carousel-caption p.big{font-size: 26px;}
-.bottomline{position: absolute;}
-.carousel-indicators {bottom: -10px; padding: 9px 25px 5px 5px;  width: 40%;}
-.carousel-indicators li{ width: 14px; height: 14px; margin: 0 4px;}
-.carousel-indicators .active{ width: 14px; height: 14px;}
-.banner-tagline{font-size: 18px; width: 60%; padding: 3px 0 6px 23px;}
-
-.slider-bg{bottom: -25px;}
-
-/*------| Responsive Tabs |------*/
-
+.carousel-caption p.big{font-size: 26px}
+.bottomline{position: absolute}
+.carousel-indicators {bottom:0; padding: 9px 15px 5px 5px}
+.carousel-indicators li{ width: 14px; height: 14px; margin: 0 4px}
+.carousel-indicators .active{ width: 14px; height: 14px}
+.banner-tagline{font-size:18px; bottom: 5px; left: 15px}
+.slider-bg{bottom: -23px}
 
 /*-----| Welcome Article |------*/
-.welcome-img img{width: 230px;}
-.welcome-txt{width: calc(100% - 231px);}
+.welcome-img img{width: 230px}
+.welcome-txt{width: calc(100% - 231px)}
+
 
 /*------| Video Section |-------*/
-.video-section .video-bg{bottom: -32px;}
+.video-section .video-bg{bottom: -32px}
+
+/*------| Responsive Tabs |--------*/
+.tab-wrapper h2{display: none}
+.nav-tabs{background: #424242; border-top:3px solid #fb5124; border-bottom: 0; overflow: hidden; padding:0 30px 0 53px}
+.nav-tabs > li:first-child{color: #fff; font-size:27px;  font-family:'NewsGothicStd';  float: left}
+.nav-tabs > li{float: right}
+.nav-tabs > li > a{background: #fb5124; border-color:transparent; border-radius: 0; color: #fff; padding:9px 15px 10px; }
+.nav-tabs > li > a:hover{border-color:transparent; background: #fff; color: #fb5124}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{color: #fb5124; border-color:transparent}
+.astro-products-row{float: right}
 
 /*-----| Footer |-----*/
-.footer-column.first{width: 20%;}
-.footer-column.second{width:30%;}
-.footer-column.third{width:30%;}
-.footer-column.last{width:20%; float: right;}
+.footer-column.first{width: 20%}
+.footer-column.second{width:30%}
+.footer-column.third{width:30%}
+.footer-column.last{width:20%; float: right}
 
 /*------|Social Share |------*/
-.social-share a{opacity: 1.0;}
+/*------|Social Share |------*/
+.social-share{position: fixed; top:211px; left:0; display: block}
+.social-share a{opacity: 1.0}

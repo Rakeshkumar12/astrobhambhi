@@ -1,26 +1,36 @@
 /*-----| Wrapper, Container |----*/
-.container{width: 100%;}
+.container{width: 100%}
 
 /*------| Courtsy |------*/
-.courtsy ul{float: left;}
-.courtsy ul li{display: inline-block;}
-.courtsy ul li.welcome{color:#f2fb0a; margin-right: 12px;}
-.courtsy ul li img{display: inline;}
-.courtsy ul li span{display:inline-block;}
-.courtsy ul li span.first{border-right: 1px solid rgba(255,255,255,0.5); padding: 4px 10px 6px; margin-right: 10px;}
-.courtsy .courtsy-right{float: right; border-top: none;}
+.courtsy{padding-bottom: 0}
+.courtsy ul{float: left}
+.courtsy ul li{display: inline-block}
+.courtsy ul li.welcome{margin-bottom: 0;}
+.courtsy ul li img{display: inline}
+.courtsy ul li span{display:inline-block; padding: 4px 3px 6px;}
+.courtsy ul li span.first{border-right: 1px solid rgba(255,255,255,0.5); margin-right: 0}
+.courtsy .courtsy-right{float: right; border-top: none}
 
 /*-----| Header |------*/
-.header .header-right{width:60%;}
+.header .header-right{width:60%}
 
 /*-----|  Navigation |-------*/
-.navbar-nav > li{background: transparent; border-bottom: 0;}
-
+.navbar-nav > li{background: transparent; border-bottom: 0}
+.navbar-right li{background: #eaeaea}
+.navbar-default .navbar-nav > li > a{padding: 10px 12px}
+.navbar-right  > li > a{height:40px;}
 
 /*-----| Slider |-----*/
-.carousel-indicators {bottom: 0; padding: 8px 6px 5px 5px;}
+.carousel-indicators {bottom: 8px; padding: 8px 6px 5px 5px}
+
+/*-----| Products |-------*/
+.product-arrow{background: url("../images/arrow.png") no-repeat 32.2% -1px, url("../images/arrow.png") no-repeat  68% -1px ;
+border-top: 1px solid #333333; display: block; height: 18px}
+.product-box .pad .left, .product-box .pad .right{width: 100%}
+.product-box .pad .left{border-right: none; padding-right:0}
+.product-box .pad .right{padding-left: 0; padding-top:10px}
 
 /*------| Video Section |-------*/
-.video-section .video-left{width: 38%; margin-right: 10px; float: left;}
-.video-section .video-right{width: calc(62% - 10px);  float: left;}
-.video-section .video-bg{bottom: -25px;}
+.video-section .video-left{width: 38%; margin-right: 10px; float: left}
+.video-section .video-right{width: calc(62% - 10px);  float: left}
+.video-section .video-bg{bottom: -25px}
