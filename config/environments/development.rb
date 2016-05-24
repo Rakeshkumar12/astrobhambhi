@@ -38,4 +38,13 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+      :login => "ajai-facilitator_api1.astrobhambi.com",
+      :password => "NGDK4MUCWNGLRYCV",
+      :signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31AkGDeEJ3cE0DFAXUsZx1UNmXhWQY"
+    )
+  end
 end
