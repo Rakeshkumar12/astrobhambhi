@@ -1,195 +1,31 @@
 <h2>Astro Services</h2>
 		<div class="products-list clearfix">
+		<% @service.each do |service| %>
 			<div class="row">
-				<div class="col-sm-4">					
-					<div class="product-box">
-						<div class="pad">
-						    <%= image_tag "product-1.png", :alt => "", :class =>"img-responsive" %>
-<!-- 							<img src="assets/product-1.png" alt="" class="img-responsive"/>
- -->							<h3>Vaastu &amp; You</h3>
-							<div class="left pull-left">
-								<p class="amount m-b-0"><span>Rs.</span> 11,000</p>
-								<%=link_to image_tag("buy-now.png"), new_order_path(amount: '11,000') %>
-								
-							</div>
-							<div class="right pull-left">
-								<p class="amount m-b-0"><span>$</span> 200</p>
-								<%=link_to image_tag("buy-now.png"), new_order_path(amount: '200') %>
-							</div>
-							<div class="clearfix"></div>
-							<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
-						</div>
-					</div>					
-				</div>
-
-				<div class="col-sm-4">					
-					<div class="product-box">
-						<div class="pad">
-						    <%= image_tag "product-2.png", :alt => "", :class =>"img-responsive" %>
-<!-- 							<img src="assets/product-2.png" alt="" class="img-responsive"/>
- -->							<h3>Rajyog</h3>
-							<div class="left pull-left">
-								<p class="amount m-b-0"><span>Rs.</span> 11,000</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="right pull-left">
-								<p class="amount m-b-0"><span>$</span> 200</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="clearfix"></div>
-							<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
-						</div>
-					</div>					
-				</div>
-
-				<div class="col-sm-4">
-					<div class="product-box">
+					<div class="col-sm-4">					
+						<div class="product-box">
 							<div class="pad">
-								<%= image_tag "product-3.png", :alt => "", :class =>"img-responsive" %>
-<!-- 								<img src="assets/product-3.png" alt="" class="img-responsive"/>
- -->								<h3>Numerology</h3>
+							    <%= image_tag service.image.url, :alt => "", :class =>"img-responsive" %>
+	<!-- 							<img src="assets/product-1.png" alt="" class="img-responsive"/>
+	 -->							<h3><%=service.title%></h3>
 								<div class="left pull-left">
-									<p class="amount m-b-0"><span>Rs.</span> 11,000</p>
-									<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
+									<p class="amount m-b-0"><span>Rs.</span> <%=service.amount%></p>
+									<%=link_to image_tag("buy-now.png"), new_order_path(amount: '11,000') %>
+									
 								</div>
 								<div class="right pull-left">
-									<p class="amount m-b-0"><span>$</span> 200</p>
-									<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
+									<p class="amount m-b-0"><span>$</span> <%=service.amount%></p>
+									<%=link_to image_tag("buy-now.png"), new_order_path(amount: '200') %>
 								</div>
 								<div class="clearfix"></div>
-								<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
+								<p class="state"><span><%=current_user.name%></span> is a celebrity astrologer of world fame.... </p>
 							</div>
-						</div>
-				</div>
+						</div>					
+					</div>
 
 			</div>
-			<!--end first row -->
+		<%end%>
 
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="product-box">
-						<div class="pad">
-							<%= image_tag "product-4.png"%>
-<!-- 							<img src="assets/product-4.png" alt=""/>
- -->							<h3>Marriage Prospects</h3>
-							<div class="left pull-left">
-								<p class="amount m-b-0"><span>Rs.</span> 5,000</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="right pull-left">
-								<p class="amount m-b-0"><span>$</span> 50</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="clearfix"></div>
-							<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="product-box">
-						<div class="pad">
-						    <%= image_tag "product-5.png"%>
-<!-- 							<img src="assets/product-5.png" alt=""/>
- -->							<h3>Love Life Report</h3>
-							<div class="left pull-left">
-								<p class="amount m-b-0"><span>Rs.</span> 5,000</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="right pull-left">
-								<p class="amount m-b-0"><span>$</span> 50</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="clearfix"></div>
-							<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="product-box">
-						<div class="pad">
-							<%= image_tag "product-6.png"%>
-<!-- 							<img src="assets/product-6.png" alt=""/>
- -->							<h3>Health Report</h3>
-							<div class="left pull-left">
-								<p class="amount m-b-0"><span>Rs.</span> 11,000</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="right pull-left">
-								<p class="amount m-b-0"><span>$</span> 200</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="clearfix"></div>
-							<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<!--end second row -->
-
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="product-box">
-						<div class="pad">
-							<%= image_tag "product-7.png"%>
-<!-- 							<img src="assets/product-7.png" alt=""/>
- -->							<h3>Career Report</h3>
-							<div class="left pull-left">
-								<p class="amount m-b-0"><span>Rs.</span> 5,000</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="right pull-left">
-								<p class="amount m-b-0"><span>$</span> 50</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="clearfix"></div>
-							<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="product-box">
-						<div class="pad">
-							<%= image_tag "product-8.png"%>
-<!-- 							<img src="assets/product-8.png" alt=""/>
- -->							<h3>Business Report</h3>
-							<div class="left pull-left">
-								<p class="amount m-b-0"><span>Rs.</span> 5,000</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="right pull-left">
-								<p class="amount m-b-0"><span>$</span> 50</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="clearfix"></div>
-							<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="product-box">
-						<div class="pad">
-							<%= image_tag "product-6.png"%>
-<!-- 							<img src="assets/product-6.png" alt=""/>
- -->							<h3>Astro Talk</h3>
-							<div class="left pull-left">
-								<p class="amount m-b-0"><span>Rs.</span> 11,000</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="right pull-left">
-								<p class="amount m-b-0"><span>$</span> 200</p>
-								<a href="javascript:void(0)"><img src="assets/buy-now.png" alt=""/></a>
-							</div>
-							<div class="clearfix"></div>
-							<p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
-						</div>
-					</div>
-				</div>
-			</div>
 			<!--end Third row -->
 
 		</div><!--end product list -->

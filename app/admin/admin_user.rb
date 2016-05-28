@@ -25,4 +25,22 @@ ActiveAdmin.register AdminUser do
     f.actions
   end
 
+  ActiveAdmin.register Service do
+    controller do
+    def permitted_params
+      params.permit service: [:title, :description, :amount, :image]
+    end
+    end
+
+     form :html => { :enctype => "multipart/form-data" } do |f|
+       f.inputs "Details" do
+        f.input :title
+        f.input :description
+        f.input :amount
+        f.input :image, :as => :file
+      end
+      f.actions
+  end
+end
+
 end
