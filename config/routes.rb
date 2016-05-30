@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :orders
   devise_for :users
   get 'home/index'
+  post "/orders/:id" => "orders#show"
+  post "/hook" => "orders#hook"
+  get '/orders/pay_amount' => "orders#pay_amount"
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

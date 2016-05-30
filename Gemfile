@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "paperclip"
+gem 'mysql2', '~> 0.3.18'
+gem 'pry'
 
 gem 'activemerchant'
 gem 'activeadmin', github: 'activeadmin'
@@ -53,6 +55,6 @@ group :test, :production do
 end
 
 group :development do
-  gem 'sqlite3'
+  
 end
 
