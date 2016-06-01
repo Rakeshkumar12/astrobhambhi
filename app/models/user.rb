@@ -20,4 +20,14 @@ class User < ActiveRecord::Base
     }
     "#{Rails.application.secrets.paypal_host}/cgi-bin/webscr?" + values.to_query
   end
+
+  def payu_url(return_path)
+    values = {
+        merchantKey: 4937855,
+        merchantTransactionIds: 12345,
+        amount: self.amount,
+        quantity: 1
+    }
+    "#{Rails.application.secrets.paypal_host}/op/getPaymentResponse?" + values.to_query
+  end
 end
