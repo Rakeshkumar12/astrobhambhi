@@ -23,21 +23,23 @@
               <%=f.select :sex,options_for_select([['Male','male'],['Female','female']]),class: "form-control"%>
             </div>
           </div><br/>
+    
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Date of Birth</label>
+            <label for="lastname" class="col-md-4 control-label">Date Of Birth</label>
             <div class="col-md-8">
-              <div id="datetimepicker1" class="input-append date">
-                <%=f.text_field :dob, class: "form-control", "data-format"=> "MM/dd/yyyy HH:mm:ss PP" %>
-                <span class="add-on">
-                  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                  </i>
-                </span>
-              </div>
+              <%=f.text_field :dob, class: "form-control", placeholder: "MM/DD/YYYY" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastname" class="col-md-4 control-label">Time</label>
+            <div class="col-md-8">
+              <%=f.text_field :dob_time, class: "form-control", placeholder: "Hh:Mm:Ss" %>
             </div>
           </div>
        
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Place of Birth</label>
+            <label for="lastname" class="col-md-4 control-label">Place Of Birth</label>
             <div class="col-md-8">
               <%=f.text_field :place, class: "form-control", placeholder: "Place Of Birth" %>
             </div>
@@ -114,11 +116,11 @@
   </div>
 </div>
 <script type="text/javascript">
-  $(function() {
-    $('#datetimepicker1').datetimepicker({
-      language: 'en',
-      pick12HourFormat: true
-    });
-  });
+  $(document).ready(function(){
+    //$('.date').mask('00/00/0000');
+    $('#user_dob_time').mask('00:00:00');
+    $('#user_dob').mask('00/00/0000');
+    //$('.date_time').mask('00/00/0000 00:00:00');
+  })
 </script>
 
