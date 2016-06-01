@@ -1,0 +1,25 @@
+<h2>Astro Services</h2>
+    <div class="products-list clearfix">
+      <div class="row">
+        <div class="col-sm-4">          
+          <div class="product-box">
+            <div class="pad">
+                <%= image_tag "product-3.png", :alt => "", :class =>"img-responsive" %>
+<!--              <img src="assets/product-1.png" alt="" class="img-responsive"/>
+ -->              <h3>Business Report</h3>
+              <div class="left pull-left">
+                <p class="amount m-b-0"><span>Rs.</span> 11,000</p>
+                <%=link_to image_tag("buy-now.png"), new_order_path(amount: '11,000') %>
+                
+              </div>
+              <div class="right pull-left">
+                <p class="amount m-b-0"><span>$</span> 200</p>
+                <%=link_to image_tag("buy-now.png"), new_order_path(amount: '200') %>
+              </div>
+              <div class="clearfix"></div>
+              <p class="state"><span>Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame.... </p>
+            </div>
+          </div>          
+        </div>      
+
+    </div><!--end product list -->

@@ -14,9 +14,9 @@
 									
 								</div>
 								<div class="right pull-left">
-									<p class="amount m-b-0"><span>$</span> <%=service.amount%></p>
+									<p class="amount m-b-0"><span>$</span> <%=(service.amount/67).round%></p>
 									<% if current_user && service.amount.present?%>
-									  <%=link_to image_tag("buy-now.png"), edit_order_path(current_user,amount: service.amount) %>
+									  <%=link_to image_tag("buy-now.png"), edit_order_path(current_user,amount: (service.amount/67).round) %>
 									<%else%>
 									  <%=link_to image_tag("buy-now.png"), new_order_path%>
 									<%end%>
