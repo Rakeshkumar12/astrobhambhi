@@ -14,8 +14,9 @@ class OrdersController < ApplicationController
   end
 
   def update
-  	@registration = User.find(params[:id])
-    @registration.update_attributes(user_params)
+    @title = params[:title]
+  	@order = User.find(params[:id])
+    @order.update_attributes(user_params)
     #@CCAVENUE_MERCHANT_ID = "bhambi3351"
     #order_id =  Time.now.strftime('%d%m%H%L') + @registration.id
     #@encRequest = ccavenue.request(12345,200,@registration.name,"#{@registration.address}","bgfhdg","noida",201301,"up","india","nagendra@gmail.com",1234556)
@@ -99,7 +100,7 @@ class OrdersController < ApplicationController
   private
     
     def user_params
-    	params.require(:user).permit(:email,:name, :phone, :sex, :dob, :place, :father_huband_name, :address, :subject, :description, :question,:amount)
+    	params.require(:user).permit(:email,:name, :phone, :sex, :dob, :place, :father_huband_name, :address, :subject, :description, :question,:amount,:currency,:dob_time)
     end
 
     def order_params
