@@ -14,7 +14,7 @@
 	                <%= form_tag edit_order_path(current_user),method: :post do %>
 	                  <%=hidden_field_tag 'title','',value: service.title %>
 										<%=hidden_field_tag 'amount','',value: service.amount %>
-										<%=hidden_field_tag 'currency','',value: 'usd' %>
+										<%=hidden_field_tag 'currency','',value: 'INR' %>
 									  <%=image_submit_tag("buy-now.png") %>
 								  <%end%>
 								</div>
@@ -23,7 +23,7 @@
 	                <%= form_tag edit_order_path(current_user),method: :post do %>
 	                  <%=hidden_field_tag 'title','',value: service.title %>
 										<%=hidden_field_tag 'amount','',value: service.amount %>
-										<%=hidden_field_tag 'currency','',value: '$' %>
+										<%=hidden_field_tag 'currency','',value: 'USD' %>
 									  <%=image_submit_tag("buy-now.png") %>
 								  <%end%>
 								</div>
@@ -32,7 +32,6 @@
 									<p class="amount m-b-0"><span>Rs.</span> <%=service.amount%></p>
 									<%=link_to image_tag("buy-now.png"), new_order_path(amount: service.amount) %>
 									</div>
-								</div>
 								<div class="right pull-left">
 									<p class="amount m-b-0"><span>$</span> <%=service.amount%></p>
 									<%=link_to image_tag("buy-now.png"), new_order_path(amount: service.amount) %>

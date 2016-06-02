@@ -8,7 +8,7 @@
         <div class="modal-body">
           <p>Select Payment Option</p>
           <p><%=title%></p>
-          <% if order.currency == 'usd'%>
+          <% if order.currency == 'INR'%>
             <p class="amount"><%=order.amount%></p>
             <div class='row'>
               <div class = "span3">
@@ -23,7 +23,7 @@
               </div>
               <div class = "span2">
                 <p> CC avenue </p>
-                <%=link_to 'Buy now via ccavenue',order_path(order), class: 'btn btn-default'%>
+                <%=link_to 'Buy now via ccavenue',order_path(order,query: 'ccavenue'), class: 'btn btn-default'%>
                   <%=image_tag('ccavenue_home_logo.gif') %>
               </div>
             </div>
@@ -37,7 +37,7 @@
               </div>
               <div class = "span2">
                 <p> CC avenue </p>
-                <%=link_to 'Buy now via ccavenue',order_path(order), class: 'btn btn-default'%>
+                <%=link_to 'Buy now via ccavenue',order_path(order,query: 'ccavenue'), class: 'btn btn-default'%>
                   <%=image_tag('ccavenue_home_logo.gif') %>
               </div>
             </div>
