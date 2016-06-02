@@ -1,1 +1,2 @@
+$('.payment_option').html("<%= escape_javascript (render partial: 'service_data', locals: {order: @order,title: @title}) %>");
 $('#myModal').modal('show')

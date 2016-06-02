@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :orders
+  resources :orders do
+    member { post 'edit' }  
+  end
   devise_for :users
   get 'home/index'
   post "/orders/:id" => "orders#show"

@@ -28,7 +28,7 @@ ActiveAdmin.register AdminUser do
   ActiveAdmin.register Service do
     controller do
     def permitted_params
-      params.permit service: [:title, :description, :amount, :image]
+      params.permit service: [:title, :description, :amount, :currency_symbol,:image]
     end
     end
 
@@ -37,6 +37,7 @@ ActiveAdmin.register AdminUser do
         f.input :title
         f.input :description
         f.input :amount
+        f.input :currency_symbol, :label => 'Currency', :as => :select, :collection => [['USD','usd'],["$","$"],["€","€"]]
         f.input :image, :as => :file
       end
       f.actions
