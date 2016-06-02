@@ -4,18 +4,16 @@ Rails.application.routes.draw do
   resources :orders do
     member { post 'edit' }  
   end
+  
+
   devise_for :users
   root 'home#index'
   get 'home/index'
   post "/orders/:id" => "orders#show"
   post "/hook" => "orders#hook"
   get '/orders/pay_amount' => "orders#pay_amount"
-  get 'home/astroservices'
-  get 'home/vastu'
-  get 'home/numerology'
-  get 'home/shop'
-  get 'home/horoscope'
-  get 'home/contact'
+  get 'orders/ccavResponseHandler' => "orders#ccavResponseHandler"
+  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

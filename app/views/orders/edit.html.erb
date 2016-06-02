@@ -84,9 +84,8 @@
               <%= f.email_field :email, autofocus: true,class: "form-control",placeholder: "Email Address" %>
             </div>
           </div>
-          <%=f.hidden_field :amount, value: params[:amount] %>
-          <%=f.hidden_field :currency, value: params[:currency] %>
-          <%=hidden_field_tag 'title','',value: params[:title] %>
+          <%=f.hidden_field :amount, value: params[:amount].present? ? params[:amount] : @order.amount %>
+          <%=f.hidden_field :currency, value: params[:currency].present? ? params[:currency] : @order.currency %>
           <div class="form-group">
             <!-- Button -->                                        
             <div class="col-md-offset-3 col-md-9">
@@ -99,26 +98,9 @@
       </div>
     </div>
   </div>
-  <div class="payment_option">
-    <%=render partial: 'service_data',locals: {order: @order, title: params[:title]} %>
-  </div>
-<!-- 
-<form method="post" action = "http://world.ccavenue.com/servlet/ccw.CCAvenueController">
-<input type="hidden" name=Merchant_Id value="bhambi3351">
-<input type="hidden" name=Amount value="200">
-<input type="hidden" name=Currency value="USD">
-<input type="hidden" name=Order_Id value="1234">
-<input type="hidden" name=Redirect_Url value="http://localhost:3000/">
-<input type="hidden" name=TxnType value="A">
-<input type="hidden" name=actionId value="AXN">
-<input type="hidden" name=Checksum value="200">
-<input type="hidden" name=billing_cust_name value="rakesh">
-<input type="hidden" name=billing_middle_name value="raki">
-<input type="hidden" name=billing_last_name value="bihar">
-<input type ="submit" value="submit">
- -->
-
-
+<div class="payment_option">
+  <%=render partial: 'service_data',locals: {order: @order,title: params[:title]} %>
+</div>
 
 <script type="text/javascript">
   $(function() {
