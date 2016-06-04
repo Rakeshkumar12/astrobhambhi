@@ -5,82 +5,88 @@
         <div class="panel-title">Update User Details</div>
       </div>  
       <div class="panel-body" >
-        <%= form_for @order, :url => {:controller => "orders", :action => "update"},remote: true do |f| %>
+        <%= form_for @order, :url => {:controller => "orders", :action => "update"},html: {class: "form-horizontal"}, remote: true do |f| %>
           <div id="signupalert" class="alert">
             <p><%#= devise_error_messages! %></p>
             <span></span>
           </div>
           <div class="form-group">
-            <label for="firstname" class="col-md-4 control-label">Name</label>
-            <div class="col-md-8">
-              <%=f.text_field :name, class: "form-control", placeholder: "User Name"%>
+            <label for="inputEmail" class="control-label col-xs-2">Name</label>
+              <div class="col-xs-8">
+                <%=f.text_field :name, class: "form-control", placeholder: "User Name"%>
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">Sex</label>
+            <div class="col-xs-8">
+              <%=f.select :sex,options_for_select([['Male','male'],['Female','female']]),class: "form-control"%>
             </div>
           </div>
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Sex</label>
-            <div class="col-md-8">
-              <%=f.select :sex,options_for_select([['Male','male'],['Female','female']]),class: "form-control"%>
-            </div>
-          </div><br/>
-          <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Date Of Birth</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Date Of Birth</label>
+            <div class="col-xs-8">
               <%=f.text_field :dob, class: "form-control", placeholder: "MM/DD/YYYY" %>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Time</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Time</label>
+            <div class="col-xs-5">
               <%=f.text_field :dob_time, class: "form-control", placeholder: "Hh:Mm:Ss" %>
             </div>
+            <div class="col-xs-3">
+              <%= f.radio_button :dob_am_pm, 'am', :checked => true %> 
+              <%= label :dob_am_pm, 'AM' %>
+              <%= f.radio_button :dob_am_pm, 'pm' %>
+              <%= label :dob_am_pm, 'PM' %>
+            </div>
           </div>
-       
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Place of Birth</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Place of Birth</label>
+            <div class="col-xs-8">
               <%=f.text_field :place, class: "form-control", placeholder: "Place Of Birth" %>
             </div>
           </div>
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Father/Husband Name</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Father/Husband Name</label>
+            <div class="col-xs-8">
               <%=f.text_field :father_huband_name, class: "form-control", placeholder: "Father/Husband Name" %>
             </div>
           </div>
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Telephone Number</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Telephone Number</label>
+            <div class="col-xs-8">
               <%=f.text_field :phone, class: "form-control", placeholder: "Telephone Number" %>
             </div>
           </div>
+
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Address</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Address</label>
+            <div class="col-xs-8">
               <%=f.text_area :address, class: "form-control", placeholder: "Address" %>
             </div>
           </div>
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Subject</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Subject</label>
+            <div class="col-xs-8">
               <%=f.text_field :subject, class: "form-control", placeholder: "Subject" %>
             </div>
           </div>
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Description</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Description</label>
+            <div class="col-xs-8">
               <%=f.text_area :description, class: "form-control", placeholder: "Description" %>
             </div>
           </div>
           <div class="form-group">
-            <label for="lastname" class="col-md-4 control-label">Questions</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Questions</label>
+            <div class="col-xs-8">
               <%=f.text_field :question, class: "form-control", placeholder: "Questions" %>
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="col-md-4 control-label">Email</label>
-            <div class="col-md-8">
+            <label for="inputEmail" class="control-label col-xs-2">Email</label>
+            <div class="col-xs-8">
               <%= f.email_field :email, autofocus: true,class: "form-control",placeholder: "Email Address" %>
             </div>
           </div>
@@ -103,11 +109,11 @@
 </div>
 
 <script type="text/javascript">
-  $(function() {
-    $('#datetimepicker1').datetimepicker({
-      language: 'en',
-      pick12HourFormat: true
-    });
-  });
+  $(document).ready(function(){
+    //$('.date').mask('00/00/0000');
+    $('#user_dob_time').mask('00:00:00');
+    $('#user_dob').mask('00/00/0000');
+    //$('.date_time').mask('00/00/0000 00:00:00');
+  })
 </script>
 
