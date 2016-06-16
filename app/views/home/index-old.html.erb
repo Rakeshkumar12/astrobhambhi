@@ -1,0 +1,62 @@
+<div class="container-fluid">
+	<div class="row">
+
+	<%= render partial: "header" %>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+				<%= render partial: "image_gallery" %>
+
+				<div class="welcome-article clearfix">
+					<h1>Welcome to <span>Astro Bhambi</span> !!!</h1>
+					<div class="welcome-img pull-left">
+					    <%= image_tag "swami.png", :alt => "", :class =>"img-responsive" %>
+					</div>
+					<div class="welcome-txt pull-left">
+						<p><span class="black">Pandit Ajai Bhambi</span> is a celebrity astrologer of world fame is a consultant to the famous <span class="orange">Actors, Politicians, Sportspersons, Film</span> and <span class="orange">TV Directors, Musicians, Artists, Writers, Models </span> and other personalities. He connects with people on a personal level and also on a philosophical plane. His desire is to equip the individual with knowledge to best deal with life and to make the best of opportunities and strengths.
+						</p>
+						<p><span class="black">Pandit Ajai Bhambi’s</span> accurate predictions continue to amaze people through his profiles and forecasts of celebrities, countries and events. He is a well known face on Indian television as well as a prolific writer....</p>
+						<a href="javascript:void(0)" class="pull-right"> <img src="assets/read-btn.png" alt=""></a>
+					</div>
+				</div>
+				<!--end welcom article -->
+
+				<%= render partial: "astro_services" %>
+
+				<%= render partial: "featured_video" %>
+				
+			</div>
+			<!--end left section-->
+			<%= render partial: "right_section" %>
+		
+		</div><!--end raw-->
+	</div>
+	<!--end container -->
+
+	<%= render partial: "astro_products" %>
+
+	<%#= render partial: "footer" %>
+		
+	<div class="social-share">
+		<ul class="list-unstyled">
+			<li><a href="javascript:void(0)"><img src="assets/facebook.png" alt=""/></a></li>
+			<li><a href="javascript:void(0)"><img src="assets/twitter.png" alt=""/></a></li>
+			<li><a href="javascript:void(0)"><img src="assets/pinterest.png" alt=""/></a></li>
+			<li><a href="javascript:void(0)"><img src="assets/git.png" alt=""/></a></li>
+			<li><a href="javascript:void(0)"><img src="assets/google.png" alt=""/></a></li>
+			<li><a href="javascript:void(0)"><img src="assets/rss.png" alt=""/></a></li>
+		</ul>
+	</div>
+	<!--end social share -->
+
+	</div><!--end row div -->
+</div><!--end container-fluid div -->
+
+<!-- Start Javascript -->
+<script src="assets/jquery.js"></script>
+<script src="assets/bootstrap.min.js"></script>
+<script src="assets/jquery.bootstrap-responsive-tabs.min.js"></script>
+<script src="assets/slick.js"></script>
+<script src="assets/main.js"></script>
+<!-- end all Javascript -->
